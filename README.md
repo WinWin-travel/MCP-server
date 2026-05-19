@@ -27,11 +27,13 @@ You need a secure token to connect.
 👉 **[Generate Access Token](https://tally.so/r/GxdpeO)**
 
 ### 2. Configure Claude Desktop
-Add following code snippet to your `claude_desktop_config.json`:
+Add following code snippet to your existing json `claude_desktop_config.json`:
 
 ```json
 {
-"mcpServers": {
+  // ... your existing settings
+
+  "mcpServers": {
     "WinWin.travel": {
       "command": "npx",
       "args": [
@@ -45,6 +47,8 @@ Add following code snippet to your `claude_desktop_config.json`:
       }
     }
   }
+
+  // ... your existing settings continue
 }
 ```
 
