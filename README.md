@@ -1,24 +1,29 @@
 # 🌍 WinWin.travel MCP Server
 
-![MCP Compatible](https://img.shields.io/badge/MCP-Compatible-blue)
-![Hosted](https://img.shields.io/badge/Deployed-Hosted%20%E2%9C%94-green)
-![Price](https://img.shields.io/badge/Price-Free-brightgreen)
-![Cashback](https://img.shields.io/badge/Cashback-Up%20to%2010%25-orange)
+![MCP Compatible](https://img.shields.io/badge/MCP-Compatible-blue) ![Hosted](https://img.shields.io/badge/Deployed-Hosted%20%E2%9C%94-green) ![Cost](https://img.shields.io/badge/Price-Free-brightgreen) ![Cashback](https://img.shields.io/badge/Cashback-Up%20to%2010%25-orange)
 
-> The official **WinWin.travel Model Context Protocol (MCP) server**.  
-> Connect AI agents directly to a massive inventory of **3M+ hotels** with real-time availability and booking capabilities.
+> **The official WinWin.travel Model Context Protocol server.**
+> Connect your AI agents directly to a massive inventory of **3 Million+ Hotels** with real-time booking capabilities.
 
 ---
 
-## 🚀 Why Use WinWin.travel MCP?
+## 🚀 Why use this MCP?
 
-- **🏢 3M+ Hotel Inventory**: Direct access to one of the world’s largest hotel databases.
-- **⚡ Fully Hosted**: No Docker, no local setup, no tunneling required.
-- **💰 Earn While You Build**: We pay *you* for usage. Get up to 10% cashback on every booking made through your agent.
-- **🧠 Smarter Search**: Filter by 500+ attributes (amenities, vibes, policies) not just price/location.
-- **🔐 Secure Access**: Token-based MCP authentication.
+Most travel MCPs are just scrapers. **WinWin.travel** is an official enterprise gateway.
 
---- 
+*   **🏢 3M+ Inventory:** Access one of the world's largest hotel databases directly.
+*   **⚡ Zero Setup:** No Docker, no `npm install`, no localhost tunneling. It's fully hosted.
+*   **💰 Earn While You Build:** We pay *you* for usage. Get up to **10% cashback** on every booking made through your agent.
+*   **🧠 Smarter Search:** Filter by 500+ attributes (amenities, vibes, policies) not just price/location.
+
+## 🗣️ Example Prompts
+
+Once connected, your AI (Claude, etc.) can handle complex travel requests:
+
+*   *"Find me a boutique hotel in Tokyo, Shibuya district, under $200/night that allows dogs (check **pet fees**) and has **blackout curtains** for jet lag."*
+*   *"Check availability for the Marriott Marquis in NY. I need a room with a **rain shower** and a **city view**."*
+*   *"What are the trending hotels in Bali right now? Filter for ones with a **pillow menu** and **disability-friendly bed height**."*
+*   *"Book the second option for 2 adults. Ensure there's a dedicated **pet station** request attached, and send the payment link to my email."*
 
 ## 🛠️ Quick Start
 
@@ -57,7 +62,7 @@ Add following code snippet to your existing json `claude_desktop_config.json`:
 
 ---
 
-## 🧰 Available Tools
+## 🧰 Capabilities
 
 | Tool | Description |
 |------|------------|
@@ -68,28 +73,10 @@ Add following code snippet to your existing json `claude_desktop_config.json`:
 | **`echo`** | Returns the provided test string without changes. Useful for diagnostics and connection checks. |
 | **`test_mcp_authentication`** | Tests MCP server authentication by calling a protected backend endpoint requiring the **authentication**. This tool verifies that user authentication via MCP token is processed successfully. |
 
-## 🧪 Example Prompts
+## 🔒 Security & Privacy
 
-Once connected, your AI (Claude, etc.) can handle structured travel requests:
-
-- *"Find me a boutique hotel in Tokyo, Shibuya district, under $200/night that allows dogs (check **pet fees**) and has **blackout curtains** for jet lag."*
-- *"Check availability for the Marriott Marquis in NY. I need a room with a **rain shower** and a **city view**."*
-- *"What are the trending hotels in Bali right now? Filter for ones with a **pillow menu** and **disability-friendly bed height**."*
-- *"Book the second option for 2 adults. Ensure there's a dedicated **pet station** request attached, and send the payment link to my email."*
-
-> [!WARNING]  
-> 
-> - Request limit: **1000 requests per hour** per token.
-> 
-> - `create_reservation` is currently scheduled for refactoring and may experience instability.
-
----
-
-## 🔐 Authentication & Security
-
-- **Official Endpoint:** You are connecting directly to WinWin.travel's secure API gateway.
-- **Bearer Token Authentication:** Access is secured via MCP token.
-- **Data Usage:** Your preferences are used to improve your booking experience. We do not sell your data to third parties.
+*   **Official Endpoint:** You are connecting directly to WinWin.travel's secure API gateway.
+*   **Data Usage:** Your preferences are used to improve your booking experience. We do not sell your data to third parties.
 
 ---
 
