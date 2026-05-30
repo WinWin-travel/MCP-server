@@ -27,37 +27,51 @@ Once connected, your AI (Claude, etc.) can handle complex travel requests:
 
 ## 🛠️ Quick Start
 
-### 1. 🔑 Get Your Access Token
+### 1. Get Your Access Token
 You need a secure token to connect.
 👉 **[Generate Access Token](https://tally.so/r/GxdpeO)**
 
-### 2. 🔌 Configure Claude Desktop
-Add this to your `claude_desktop_config.json`:
+### 2. Configure Claude Desktop
+Add following code snippet to your existing json `claude_desktop_config.json`:
 
 ```json
 {
+  // ... your existing settings
+
   "mcpServers": {
-    "winwin-travel": {
-      "url": "https://sandbox.api.winwin.travel/mcp/sse",
-      "headers": {
-        "Authorization": "Bearer YOUR_ACCESS_TOKEN_HERE"
+    "WinWin.travel": {
+      "command": "npx",
+      "args": [
+        "mcp-remote",
+        "https://mcp.winwin.travel/mcp/sse",
+        "--header",
+        "Authorization:${AUTH_HEADER}"
+      ],
+      "env": {
+        "AUTH_HEADER": "Bearer YOUR_ACCESS_TOKEN_HERE"
       }
     }
   }
+
+  // ... your existing settings continue
 }
 ```
 
-*That's it. Restart Claude and start booking.*
+> [!IMPORTANT]  
+> **Restart Claude after saving the configuration.**
+
+---
 
 ## 🧰 Capabilities
 
 | Tool | Description |
-| :--- | :--- |
-| **`search_hotels`** | **Deep Search:** Filter hotel/rooms/hotel deals using over 500 specific filters to find the perfect match. |
-| **`get_hotel_details`** | **Rich Intelligence:** Retrieve full details on hotels, rooms, amenities, facilities, and reviews. |
-| **`book_reservation`** | **Full Logic Booking:** Manage reservations end-to-end. Generate secure payment links or process transactions via Stripe MCP integration. |
-| **`rate_hotel`** | **Preference Learning:** Give hotels "likes" and "dislikes" to train our AI-assisted selection engine for better future recommendations. |
-| **`get_market_trends`** | **Market Insights:** Access real-time hotel statistics, track price changes, and set up alerts/triggers. |
+|------|------------|
+| **`search`** | Searches for available hotel room offers by destination, stay dates, guest composition, and optional filters — such as meal plans, cancellation policies, amenities (pool, spa), accessibility features, pet policies, and 500+ other criteria. |
+| **`get_filters`** | Returns the full list of available filter options — amenities, meal plans, cancellation types, accessibility features, pet policies, and more. Use this before searching to discover valid filter values. |
+| **`create_reservation`** | Creates a reservation for a hotel room offer selected from search results and returns a payment link. The booking is confirmed automatically once payment is completed. |
+| **`get_reservation_status`** | Checks the current status of a reservation using the identifier returned by `create_reservation`. |
+| **`echo`** | Returns the provided test string without changes. Useful for diagnostics and connection checks. |
+| **`test_mcp_authentication`** | Verifies that your MCP token is valid and authentication is working correctly. |
 
 ## 🔒 Security & Privacy
 
@@ -68,5 +82,5 @@ Add this to your `claude_desktop_config.json`:
 
 <p align="center">
   Built with ❤️ by the WinWin.travel Team<br>
-  <a href="mailto:mcp@winwin.travel">mcp@winwin.travel</a>
+  <a href="mailto:vadym.k@winwin.travel">vadym.k@winwin.travel</a>
 </p>
