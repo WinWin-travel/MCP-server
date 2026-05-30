@@ -66,12 +66,12 @@ Add following code snippet to your existing json `claude_desktop_config.json`:
 
 | Tool | Description |
 |------|------------|
-| **`search`** | Searches for available hotels and room offers by destination, stay dates, guest composition, and optional technical filters. |
-| **`get_filters`** | Returns a complete directory of available parameters and criteria for filtering commercial offers. Useful for building structured and validated search requests. |
-| **`create_reservation`** | Executes a hotel booking transaction based on the selected offer and generates a payment link. ⚠️ **Planned for refactoring** — this tool may not function reliably in its current version. |
-| **`get_reservation_status`** | Returns the current status of an existing reservation by its unique identifier. The reservation unique identifier is returned after successful reservation creation. |
+| **`search`** | Searches for available hotel room offers by destination, stay dates, guest composition, and optional filters — such as meal plans, cancellation policies, amenities (pool, spa), accessibility features, pet policies, and 500+ other criteria. |
+| **`get_filters`** | Returns the full list of available filter options — amenities, meal plans, cancellation types, accessibility features, pet policies, and more. Use this before searching to discover valid filter values. |
+| **`create_reservation`** | Creates a reservation for a hotel room offer selected from search results and returns a payment link. The booking is confirmed automatically once payment is completed. |
+| **`get_reservation_status`** | Checks the current status of a reservation using the identifier returned by `create_reservation`. |
 | **`echo`** | Returns the provided test string without changes. Useful for diagnostics and connection checks. |
-| **`test_mcp_authentication`** | Tests MCP server authentication by calling a protected backend endpoint requiring the **authentication**. This tool verifies that user authentication via MCP token is processed successfully. |
+| **`test_mcp_authentication`** | Verifies that your MCP token is valid and authentication is working correctly. |
 
 ## 🔒 Security & Privacy
 
@@ -82,5 +82,5 @@ Add following code snippet to your existing json `claude_desktop_config.json`:
 
 <p align="center">
   Built with ❤️ by the WinWin.travel Team<br>
-  <a href="mailto:mcp@winwin.travel">mcp@winwin.travel</a>
+  <a href="mailto:vadym.k@winwin.travel">vadym.k@winwin.travel</a>
 </p>
