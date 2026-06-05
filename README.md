@@ -102,8 +102,19 @@ Any MCP-compatible client works. Clients like **Cursor** and **Windsurf** suppor
 #### How do I know the connection is working?
 Ask your AI: *"Use the `test_mcp_authentication` tool to check if WinWin.travel is connected."* A successful response confirms your token is valid. You should also see **WinWin.travel** listed in your client's active MCP tools.
 
-#### How does cashback work?
-Every booking made through your agent earns you up to 10% cashback, tracked automatically against your access token. Contact [vadym.k@winwin.travel](mailto:vadym.k@winwin.travel) for payout details.
+#### How does the Affiliate Program work?
+We pay affiliate commissions based on your monthly booking volume:
+
+| Tier | Bookings/month | Commission |
+|------|---------------|------------|
+| Tier 1 | 5+ | 4% of total booking value |
+| Tier 2 | 20+ | 7% of total booking value |
+| Tier 3 | 50+ | 10% of total booking value |
+| Tier 4 | 100+ | Special terms |
+
+Tier is calculated per calendar month. Bookings are counted after a 14-day hold — from payment date for non-refundable bookings, or from guest checkout for refundable bookings.
+
+An affiliate contract will be sent within 2 weeks after your first successful affiliate booking. Questions? [vadym.k@winwin.travel](mailto:vadym.k@winwin.travel)
 
 #### The tool isn't showing up in Claude — what do I check?
 1. Confirm the JSON in `claude_desktop_config.json` is valid (no trailing commas, no `//` comments inside the JSON).
