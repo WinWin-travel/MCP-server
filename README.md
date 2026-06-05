@@ -80,6 +80,47 @@ Add following code snippet to your existing json `claude_desktop_config.json`:
 
 ---
 
+## 💳 Booking Flow
+
+1. **Search** — your AI calls `search` and returns a list of available offers.
+2. **Select** — you tell the AI which option to book.
+3. **Reserve** — the AI calls `create_reservation` and receives a **payment link**.
+4. **Pay** — you complete payment in your browser. Card data is never passed through the AI.
+5. **Confirm** — booking is confirmed automatically. Use `get_reservation_status` to check anytime.
+
+---
+
+## ❓ FAQ
+
+#### Which AI clients are supported besides Claude Desktop?
+Any MCP-compatible client works. Clients like **Cursor** and **Windsurf** support remote MCP servers natively — no `npx` or Node.js needed. Just point them directly at `https://mcp.winwin.travel/mcp/sse` with your `Authorization: Bearer YOUR_TOKEN` header in your client's MCP settings.
+
+#### Where is `claude_desktop_config.json` located?
+- **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
+
+#### How do I know the connection is working?
+Ask your AI: *"Use the `test_mcp_authentication` tool to check if WinWin.travel is connected."* A successful response confirms your token is valid. You should also see **WinWin.travel** listed in your client's active MCP tools.
+
+#### How does cashback work?
+Every booking made through your agent earns you up to 10% cashback, tracked automatically against your access token. Contact [vadym.k@winwin.travel](mailto:vadym.k@winwin.travel) for payout details.
+
+#### The tool isn't showing up in Claude — what do I check?
+1. Confirm the JSON in `claude_desktop_config.json` is valid (no trailing commas, no `//` comments inside the JSON).
+2. Verify the file is saved in the correct OS path (see above).
+3. Fully quit and relaunch Claude Desktop — closing the window is not enough.
+
+#### My token isn't working — what should I check?
+Run `test_mcp_authentication` — it returns an explicit error if the token is invalid or expired. Make sure you replaced `YOUR_ACCESS_TOKEN_HERE` with the full token string and there are no extra spaces.
+
+#### Is this available globally?
+Yes. The server covers worldwide hotel inventory. Availability and pricing depend on the destination and dates searched.
+
+#### Is there a cost to use this MCP?
+No. Connecting and searching is free. You only pay when completing a hotel booking.
+
+---
+
 <p align="center">
   Built with ❤️ by the WinWin.travel Team<br>
   <a href="mailto:vadym.k@winwin.travel">vadym.k@winwin.travel</a>
