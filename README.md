@@ -25,40 +25,15 @@ Once connected, your AI (Claude, etc.) can handle complex travel requests:
 *   *"What are the trending hotels in Bali right now? Filter for ones with a **pillow menu** and **disability-friendly bed height**."*
 *   *"Book the second option for 2 adults. Ensure there's a dedicated **pet station** request attached, and send the payment link to my email."*
 
-## 🛠️ Quick Start
 
-### 1. Get Your Access Token
-You need a secure token to connect.
-👉 **[Generate Access Token](https://tally.so/r/GxdpeO)**
+## 🔌 Connection Guides
 
-### 2. Configure Claude Desktop
-Add following code snippet to your existing json `claude_desktop_config.json`:
+Choose the setup method that fits your workflow:
 
-```json
-{
-  // ... your existing settings
-
-  "mcpServers": {
-    "WinWin.travel": {
-      "command": "npx",
-      "args": [
-        "mcp-remote",
-        "https://mcp.winwin.travel/mcp/sse",
-        "--header",
-        "Authorization:${AUTH_HEADER}"
-      ],
-      "env": {
-        "AUTH_HEADER": "Bearer YOUR_ACCESS_TOKEN_HERE"
-      }
-    }
-  }
-
-  // ... your existing settings continue
-}
-```
-
-> [!IMPORTANT]  
-> **Restart Claude after saving the configuration.**
+| Method | Description | Guide |
+|--------|-------------|-------|
+| **Quick Connect** | Fastest way — connect via Claude Desktop config in minutes | [→ Quick Connect Guide](CONNECT_QUICK.md) |
+| **Connect with Skills** | Enhanced approach — install a skill for smarter, context-aware hotel search | [→ Skills Setup Guide](CONNECT_SKILLS.md) |
 
 ---
 
