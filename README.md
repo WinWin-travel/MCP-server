@@ -33,7 +33,7 @@ Choose the setup method that fits your workflow:
 | Method | Description | Guide |
 |--------|-------------|-------|
 | **Quick Connect** | Fastest way — connect via Claude Desktop config in minutes | [→ Quick Connect Guide](CONNECT_QUICK.md) |
-| **Connect with Skills (recommended)** | Enhanced approach — install a skill for smarter, context-aware hotel search | [→ Skills Setup Guide](CONNECT_SKILLS.md) |
+| **Connect with Skills (recommended)** | Enhanced approach — install a skill for smarter, context-aware hotel search | [→ Skills Setup Guide](CONNECT_WITH_SKILLS.md) |
 
 ---
 
