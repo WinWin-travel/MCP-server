@@ -65,6 +65,22 @@ Choose the setup method that fits your workflow:
 
 ---
 
+## 🤖 Recommended AI Models
+
+For the most reliable experience, we recommend using language models with an **Intelligence Index equivalent to Claude Sonnet 4.6 or higher**.
+
+Models below this capability level may misinterpret MCP tool responses, hallucinate hotel data, or ignore tool instructions when processing complex travel requests.
+
+See the full guide for:
+- recommended models;
+- minimum supported Intelligence Index;
+- known issues with lower-capability models;
+- best practices for production use.
+
+👉 **[Recommended AI Models](RECOMMENDED_MODELS.md)**
+
+---
+
 ## ❓ FAQ
 
 #### Which AI clients are supported besides Claude Desktop?
