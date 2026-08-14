@@ -105,7 +105,7 @@ We pay affiliate commissions based on your monthly booking volume:
 
 Tier is calculated per calendar month. Bookings are counted after a 14-day hold — from payment date for non-refundable bookings, or from guest checkout for refundable bookings.
 
-An affiliate contract will be sent within 2 weeks after your first successful affiliate booking. Questions? [vadym.k@winwin.travel](mailto:vadym.k@winwin.travel)
+An affiliate contract will be sent within 2 weeks after your first successful affiliate booking. Questions? [mcp@winwin.travel](mailto:mcp@winwin.travel)
 
 #### The tool isn't showing up in Claude — what do I check?
 1. Confirm the JSON in `claude_desktop_config.json` is valid (no trailing commas, no `//` comments inside the JSON).
@@ -125,5 +125,5 @@ No. Connecting and searching is free. You only pay when completing a hotel booki
 
 <p align="center">
   Built with ❤️ by the WinWin.travel Team<br>
-  <a href="mailto:vadym.k@winwin.travel">vadym.k@winwin.travel</a>
+  <a href="mailto:mcp@winwin.travel">mcp@winwin.travel</a>
 </p>
