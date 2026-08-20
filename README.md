@@ -36,9 +36,8 @@ Want to see WinWin MCP in action without writing any glue code yourself? We ship
 * 🧩 **Fully wired n8n template** — already connected to the WinWin MCP, with structured-output parsing, photo validation, and Data Table storage for galleries.
 * 🧠 **Persistent chat memory** — keeps multi-turn context (pagination, follow-up questions, language switching) across messages. The template ships with Postgres, but the memory node is swappable for any other chat-memory backend n8n supports.
 
-📦 **Template file:** [`winwin-hotel-demo-bot.json`](winwin-hotel-demo-bot.json)
-📖 **Setup guide:** [→ n8n Setup Guide](CONNECT_N8N.md)
-
+📦 **Template file:** [`winwin-hotel-demo-bot.json`](n8n-demo-bot/winwin-hotel-demo-bot.json)
+📖 **Setup guide:** [→ n8n Setup Guide](n8n-demo-bot/CONNECT_N8N.md)
 
 ## 🔌 Connection Guides
 
@@ -48,7 +47,7 @@ Choose the setup method that fits your workflow:
 |--------|-------------|-------|
 | **Quick Connect** | Fastest way — connect via Claude Desktop config in minutes | [→ Quick Connect Guide](CONNECT_QUICK.md) |
 | **Connect with Skills (recommended)** | Enhanced approach — install a skill for smarter, context-aware hotel search | [→ Skills Setup Guide](CONNECT_WITH_SKILLS.md) |
-| **n8n Demo Bot** | Drop-in n8n workflow template — Telegram AI travel agent on top of WinWin MCP | [→ n8n Setup Guide](CONNECT_N8N.md) |
+| **n8n Demo Bot** | Drop-in n8n workflow template — Telegram AI travel agent on top of WinWin MCP | [→ n8n Setup Guide](n8n-demo-bot/CONNECT_N8N.md) |
 
 ---
 
@@ -137,7 +136,7 @@ Yes. The server covers worldwide hotel inventory. Availability and pricing depen
 No. Connecting and searching is free. You only pay when completing a hotel booking.
 
 #### Is there an official n8n template I can install with one click?
-Yes. The **WinWin Hotel Demo Bot** is published as an official n8n template, so you can install it directly from the n8n template gallery without copying any files. After installing, plug in your Telegram bot token, your chat-model credential (see [Recommended AI Models](RECOMMENDED_MODELS.md) for the provider/model to use — the template ships wired to an OpenAI node, but you can swap it for any provider recommended there), the WinWin MCP bearer, and your preferred chat-memory backend (the template ships with Postgres), create the `OfferPhotos` Data Table, and activate. A copy of the same workflow is also available as [`winwin-hotel-demo-bot.json`](winwin-hotel-demo-bot.json) for manual import. Full walkthrough: [→ n8n Setup Guide](CONNECT_N8N.md).
+Yes. The **WinWin Hotel Demo Bot** is published as an official n8n template, so you can install it directly from the n8n template gallery without copying any files. After installing, plug in your Telegram bot token, your chat-model credential (see [Recommended AI Models](RECOMMENDED_MODELS.md) for the provider/model to use — the template ships wired to an OpenAI node, but you can swap it for any provider recommended there), the WinWin MCP bearer, and your preferred chat-memory backend (the template ships with Postgres), create the `OfferPhotos` Data Table, and activate. A copy of the same workflow is also available as [`winwin-hotel-demo-bot.json`](n8n-demo-bot/winwin-hotel-demo-bot.json) for manual import. Full walkthrough: [→ n8n Setup Guide](n8n-demo-bot/CONNECT_N8N.md).
 
 ---
 
